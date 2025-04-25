@@ -21,11 +21,11 @@ import {
 } from '@nestjs/common';
 import { CampingResponseDto, CreateCampingDto } from './dto/create-camping.dto';
 import { CampingsService } from './campings.service';
-import { AuthGuardGuard } from 'src/guards/auth-guard.guard';
+import { AuthGuardGuard } from '../../guards/auth-guard.guard';
 import { ApiBearerAuth, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { Roles } from 'src/decorators/roles.decorators';
-import { Role } from 'src/common/enums/role.enum';
-import { RolesGuard } from 'src/guards/roles.guard';
+import { Roles } from '../../decorators/roles.decorators';
+import { Role } from '../../common/enums/role.enum';
+import { RolesGuard } from '../../guards/roles.guard';
 import { ApiBody, ApiConsumes } from '@nestjs/swagger';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { ReviewResponseDto } from './dto/review-response.dto';

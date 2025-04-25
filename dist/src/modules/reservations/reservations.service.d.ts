@@ -1,6 +1,6 @@
 import { CreateReservationDto } from './dto/create-reservation.dto';
 import { UpdateReservationDto } from './dto/update-reservation.dto';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 import { Reservation } from '@prisma/client';
 import { Cache } from 'cache-manager';
 interface ReservationDataType {

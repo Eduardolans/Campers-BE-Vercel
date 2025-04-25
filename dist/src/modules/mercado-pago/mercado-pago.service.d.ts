@@ -1,7 +1,7 @@
 import { ReservationsService } from '../reservations/reservations.service';
 import { Reservation } from '@prisma/client';
 import { PaymentRepository } from './payment.repository';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 export declare class MercadoPagoService {
     private readonly reservationService;
     private readonly prisma;

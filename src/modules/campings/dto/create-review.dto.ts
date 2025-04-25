@@ -1,8 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Transform } from 'class-transformer';
-import {  IsDate, IsNotEmpty, IsNumber, IsOptional, IsString, IsUrl, Matches, Max, Min } from 'class-validator';
-import { SANITIZE_CONFIG } from 'src/config/sanitize.config';
-import { IsSanitizedHtml } from 'src/decorators/is-sanitizated-html.decorator';
+import { IsDate, IsNotEmpty, IsNumber, IsOptional, IsString, IsUrl, Matches, Max, Min } from 'class-validator';
+import { SANITIZE_CONFIG } from '../../../config/sanitize.config';
+import { IsSanitizedHtml } from '../../../decorators/is-sanitizated-html.decorator';
 
 export class createReviewDto {
   @ApiProperty({ example: 1 })

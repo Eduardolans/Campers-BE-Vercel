@@ -15,7 +15,7 @@ import { ReservationsService } from './reservations.service';
 import { CreateReservationDto } from './dto/create-reservation.dto';
 import { UpdateReservationDto } from './dto/update-reservation.dto';
 import { ApiBearerAuth, ApiOperation, ApiQuery } from '@nestjs/swagger';
-import { AuthGuardGuard } from 'src/guards/auth-guard.guard';
+import { AuthGuardGuard } from '../../guards/auth-guard.guard';
 
 @Controller('reservations')
 @ApiBearerAuth()

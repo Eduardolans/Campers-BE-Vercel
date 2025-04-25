@@ -1,11 +1,11 @@
 import { BadRequestException, Injectable, Logger, NotAcceptableException, NotFoundException } from '@nestjs/common';
 import { ReservationsService } from '../reservations/reservations.service';
-import { PaymentDataType } from 'src/common/types/mercadoPago/payment';
-import { RESERVATION_STATUS } from 'src/common/enums/reservation-status.enum';
+import { PaymentDataType } from '../../common/types/mercadoPago/payment';
+import { RESERVATION_STATUS } from '../../common/enums/reservation-status.enum';
 import { Reservation } from '@prisma/client';
 import { PaymentRepository } from './payment.repository';
-import { PrismaService } from 'src/prisma/prisma.service';
-import { MP_ERROR_MESSAGES } from 'src/common/errorMessages/mercado-pago-messages';
+import { PrismaService } from '../../prisma/prisma.service';
+import { MP_ERROR_MESSAGES } from '../../common/errorMessages/mercado-pago-messages';
 
 @Injectable()
 export class MercadoPagoService {

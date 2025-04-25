@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Query, ParseIntPipe, BadRequestException, Body, Res, Req } from '@nestjs/common';
 import { MercadoPagoService } from './mercado-pago.service';
 import { Request, Response } from 'express';
-import { NotificationMPType } from 'src/common/types/mercadoPago/notification';
+import { NotificationMPType } from '../../common/types/mercadoPago/notification';
 import { CampingGateway } from '../webSockets/camping.gateway';
 import { RefoundPaymentDto } from './dto/refound-payment.dto';
 

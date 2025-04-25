@@ -11,7 +11,7 @@ import { SearchCampingDto } from './dto/search-camping.dto';
 import { Prisma } from '@prisma/client';
 import { Cache } from 'cache-manager';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
-import { generateCacheKey } from 'src/common/keyCache.generate';
+import { generateCacheKey } from '../../common/keyCache.generate';
 import { PrismaClientKnownRequestError, PrismaClientInitializationError } from '@prisma/client/runtime/library';
 import e from 'express';
 
