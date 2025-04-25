@@ -1,0 +1,1 @@
+{"version":3,"file":"camping.entity.js","sourceRoot":"","sources":["../../../../../src/modules/campings/entities/camping.entity.ts"],"names":[],"mappings":";;;;AAAA,2CAAwC;AAE3B,QAAA,kBAAkB,GAAG,eAAM,CAAC,SAAS,EAA6B,CAAC;IAC9E,OAAO,EAAE;QACP,SAAS,EAAE,IAAI;QACf,QAAQ,EAAE,IAAI;QACd,OAAO,EAAE,IAAI;QACb,iBAAiB,EAAE,IAAI;KACxB;CACF,CAAC,CAAC"}
