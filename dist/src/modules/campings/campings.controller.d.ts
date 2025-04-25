@@ -10,9 +10,9 @@ export declare class CampingsController {
         name: string;
         description: string;
         contactPhone: string;
-        userId: string;
         locationId: number;
         limitCampingId: number;
+        userId: string;
         createdAt: Date;
         updatedAt: Date;
     }>;
@@ -22,9 +22,9 @@ export declare class CampingsController {
         name: string;
         description: string;
         contactPhone: string;
-        userId: string;
         locationId: number;
         limitCampingId: number;
+        userId: string;
         createdAt: Date;
         updatedAt: Date;
     }>;
@@ -33,9 +33,9 @@ export declare class CampingsController {
         name: string;
         description: string;
         contactPhone: string;
-        userId: string;
         locationId: number;
         limitCampingId: number;
+        userId: string;
         createdAt: Date;
         updatedAt: Date;
     }>;
@@ -85,9 +85,9 @@ export declare class CampingsController {
         name: string;
         description: string;
         contactPhone: string;
-        userId: string;
         locationId: number;
         limitCampingId: number;
+        userId: string;
         createdAt: Date;
         updatedAt: Date;
     })[]>;

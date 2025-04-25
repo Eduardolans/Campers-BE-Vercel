@@ -7,9 +7,9 @@ export declare class ReservationsController {
     create(createReservationDto: CreateReservationDto): Promise<{
         id: number;
         userId: string;
-        campingId: number;
         createdAt: Date;
         updatedAt: Date;
+        campingId: number;
         startDate: Date;
         endDate: Date;
         peopleCount: number;
@@ -20,9 +20,9 @@ export declare class ReservationsController {
     findAll(): import(".prisma/client").Prisma.PrismaPromise<{
         id: number;
         userId: string;
-        campingId: number;
         createdAt: Date;
         updatedAt: Date;
+        campingId: number;
         startDate: Date;
         endDate: Date;
         peopleCount: number;
@@ -33,9 +33,9 @@ export declare class ReservationsController {
     findOne(id: number): Promise<{
         id: number;
         userId: string;
-        campingId: number;
         createdAt: Date;
         updatedAt: Date;
+        campingId: number;
         startDate: Date;
         endDate: Date;
         peopleCount: number;
@@ -46,9 +46,9 @@ export declare class ReservationsController {
     findByCampingId(id: number): Promise<{
         id: number;
         userId: string;
-        campingId: number;
         createdAt: Date;
         updatedAt: Date;
+        campingId: number;
         startDate: Date;
         endDate: Date;
         peopleCount: number;
@@ -65,9 +65,9 @@ export declare class ReservationsController {
     update(id: number, updateReservationDto: UpdateReservationDto): import(".prisma/client").Prisma.Prisma__ReservationClient<{
         id: number;
         userId: string;
-        campingId: number;
         createdAt: Date;
         updatedAt: Date;
+        campingId: number;
         startDate: Date;
         endDate: Date;
         peopleCount: number;
@@ -78,9 +78,9 @@ export declare class ReservationsController {
     remove(id: number): import(".prisma/client").Prisma.Prisma__ReservationClient<{
         id: number;
         userId: string;
-        campingId: number;
         createdAt: Date;
         updatedAt: Date;
+        campingId: number;
         startDate: Date;
         endDate: Date;
         peopleCount: number;

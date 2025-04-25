@@ -19,9 +19,9 @@ export declare class ReservationsService {
     create(createReservationDto: CreateReservationDto): Promise<{
         id: number;
         userId: string;
-        campingId: number;
         createdAt: Date;
         updatedAt: Date;
+        campingId: number;
         startDate: Date;
         endDate: Date;
         peopleCount: number;
@@ -32,9 +32,9 @@ export declare class ReservationsService {
     findAll(): import(".prisma/client").Prisma.PrismaPromise<{
         id: number;
         userId: string;
-        campingId: number;
         createdAt: Date;
         updatedAt: Date;
+        campingId: number;
         startDate: Date;
         endDate: Date;
         peopleCount: number;
@@ -47,9 +47,9 @@ export declare class ReservationsService {
     update(id: number, updateReservationDto: UpdateReservationDto): import(".prisma/client").Prisma.Prisma__ReservationClient<{
         id: number;
         userId: string;
-        campingId: number;
         createdAt: Date;
         updatedAt: Date;
+        campingId: number;
         startDate: Date;
         endDate: Date;
         peopleCount: number;
@@ -60,9 +60,9 @@ export declare class ReservationsService {
     remove(id: number): import(".prisma/client").Prisma.Prisma__ReservationClient<{
         id: number;
         userId: string;
-        campingId: number;
         createdAt: Date;
         updatedAt: Date;
+        campingId: number;
         startDate: Date;
         endDate: Date;
         peopleCount: number;
