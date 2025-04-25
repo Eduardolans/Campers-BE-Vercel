@@ -1,5 +1,5 @@
 import { Payment } from '@prisma/client';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 export declare class PaymentRepository {
     private readonly prisma;
     constructor(prisma: PrismaService);

@@ -1,9 +1,9 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from '@nestjs/common';
 import { UserService } from './users.service';
-import { AuthGuardGuard } from 'src/guards/auth-guard.guard';
-import { Roles } from 'src/decorators/roles.decorators';
-import { Role } from 'src/common/enums/role.enum';
-import { RolesGuard } from 'src/guards/roles.guard';
+import { AuthGuardGuard } from '../../guards/auth-guard.guard';
+import { Roles } from '../../decorators/roles.decorators';
+import { Role } from '../../common/enums/role.enum';
+import { RolesGuard } from '../../guards/roles.guard';
 import { ApiBearerAuth } from '@nestjs/swagger';
 
 @UseGuards(AuthGuardGuard)

@@ -1,12 +1,12 @@
-import { Inject, Injectable,Logger, UnprocessableEntityException } from '@nestjs/common';
+import { Inject, Injectable, Logger, UnprocessableEntityException } from '@nestjs/common';
 import { CreateReservationDto } from './dto/create-reservation.dto';
 import { UpdateReservationDto } from './dto/update-reservation.dto';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '../../prisma/prisma.service';
 import { LimitCamping, Reservation } from '@prisma/client';
 import { Cache } from 'cache-manager';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
-import { RESERVATION_STATUS } from 'src/common/enums/reservation-status.enum';
-import { RESERVATION_ERROR_MESSAGES } from 'src/common/errorMessages/reservations-error-messages';
+import { RESERVATION_STATUS } from '../../common/enums/reservation-status.enum';
+import { RESERVATION_ERROR_MESSAGES } from '../../common/errorMessages/reservations-error-messages';
 
 interface ReservationDataType {
   campingId: number;

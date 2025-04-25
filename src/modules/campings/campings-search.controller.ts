@@ -14,7 +14,7 @@ import {
 import { CampingSearchService } from './campings-search.service';
 import { SearchCampingDto } from './dto/search-camping.dto';
 import { ApiBearerAuth, ApiOkResponse, ApiQuery, ApiTags } from '@nestjs/swagger';
-import { AuthGuardGuard } from 'src/guards/auth-guard.guard';
+import { AuthGuardGuard } from '../../guards/auth-guard.guard';
 
 @Controller('campings/search')
 @ApiBearerAuth()
