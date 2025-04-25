@@ -14,9 +14,9 @@ export declare class UserController {
             name: string;
             description: string;
             contactPhone: string;
+            userId: string;
             locationId: number;
             limitCampingId: number;
-            userId: string;
             createdAt: Date;
             updatedAt: Date;
         }[];
