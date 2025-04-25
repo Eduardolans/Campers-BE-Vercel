@@ -27,14 +27,5 @@
                 "Access-Control-Allow-Credentials": "true"
             }
         }
-    ],
-    "env": {
-        "DATABASE_URL": "@database_url",
-        "JWT_SECRET": "@jwt_secret",
-        "ACCESS_TOKEN": "@access_token",
-        "CHECKOUT_URL": "@checkout_url",
-        "CLOUNDINARY_NAME": "@cloudinary_name",
-        "CLOUNDINARY_API_KEY": "@cloudinary_api_key",
-        "CLOUNDINARY_API_SECRET": "@cloudinary_api_secret"
-    }
+    ]
 }
