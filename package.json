@@ -9,7 +9,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "nest build",
+    "build": "nest build && cp -r dist/src/* dist/api/",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -35,7 +35,6 @@
     "@nestjs/swagger": "^11.1.0",
     "@nestjs/websockets": "^11.0.16",
     "@prisma/client": "^6.5.0",
-    "@vendia/serverless-express": "^4.12.6",
     "bcrypt": "^5.1.1",
     "cache-manager": "^6.4.2",
     "cacheable": "^1.8.10",
