@@ -5,14 +5,27 @@
     "framework": null,
     "functions": {
         "api/index.js": {
-            "runtime": "vercel-node@20.0.0",
+            "runtime": "nodejs16.x",
             "maxDuration": 30
         }
     },
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "dist/api/index.js"
+            "dest": "api/index.js",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE",
+                "PATCH",
+                "OPTIONS"
+            ],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+                "Access-Control-Allow-Credentials": "true"
+            }
         }
     ]
 }
