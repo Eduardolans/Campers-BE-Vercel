@@ -14,7 +14,7 @@ const openapi = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
 const swagger_1 = require("@nestjs/swagger");
 const class_transformer_1 = require("class-transformer");
-const is_sanitizated_html_decorator_1 = require(".../../decorators/is-sanitizated-html.decorator");
+const is_sanitizated_html_decorator_1 = require("../../../decorators/is-sanitizated-html.decorator");
 const sanitize_config_1 = require("../../../config/sanitize.config");
 class UpdateLocationDto {
     static _OPENAPI_METADATA_FACTORY() {

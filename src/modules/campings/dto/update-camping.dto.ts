@@ -11,7 +11,7 @@ import {
 } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
-import { IsSanitizedHtml } from '.../../decorators/is-sanitizated-html.decorator';
+import { IsSanitizedHtml } from '../../../decorators/is-sanitizated-html.decorator';
 import { SANITIZE_CONFIG, SANITIZE_RICH_TEXT_CONFIG } from '../../../config/sanitize.config';
 
 class UpdateLocationDto {
