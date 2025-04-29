@@ -1,12 +1,74 @@
+// import { NestFactory } from '@nestjs/core';
+// import { AppModule } from './app.module';
+// import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+// import { AllExceptionsFilter } from './common/exception.filter';
+// import compression from 'compression';
+
+// import { ValidationPipe } from '@nestjs/common';
+// import helmet from 'helmet';
+
+// async function bootstrap() {
+//   const app = await NestFactory.create(AppModule);
+
+//   app.use(compression());
+
+//   app.useGlobalPipes(
+//     new ValidationPipe({
+//       whitelist: true,
+//       forbidNonWhitelisted: true,
+//       transform: true,
+//       transformOptions: {
+//         enableImplicitConversion: true,
+//       },
+//     }),
+//   );
+
+//   app.enableCors({
+//     origin: '*',
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     preflightContinue: false,
+//     optionsSuccessStatus: 204,
+//     credentials: true,
+//   });
+//   app.use(helmet());
+//   app.setGlobalPrefix('api/v1');
+//   app.useGlobalFilters(new AllExceptionsFilter());
+
+//   const config = new DocumentBuilder()
+//     .setTitle('Campers')
+//     .setDescription('API para la gestion de campings')
+//     .setVersion('1.0')
+//     .addBearerAuth({
+//       type: 'http',
+//       scheme: 'bearer',
+//       bearerFormat: 'JWT',
+//       name: 'Authorization',
+//       in: 'header',
+//     })
+//     .build();
+//   const documentFactory = () => SwaggerModule.createDocument(app, config);
+//   SwaggerModule.setup('swagger', app, documentFactory);
+
+//   await app.listen(process.env.PORT ?? 3000);
+// }
+// bootstrap();
+// function compresion(): any {
+//   throw new Error('Function not implemented.');
+// }
+
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AllExceptionsFilter } from './common/exception.filter';
 import compression from 'compression';
-
-import { ValidationPipe } from '@nestjs/common';
 import helmet from 'helmet';
+import { ValidationPipe } from '@nestjs/common';
+import { VercelRequest, VercelResponse } from '@vercel/node';
+import * as express from 'express';
 
+let server: express.Express | null = null;
+
+// Esta función inicializa la app Nest y la guarda en "server"
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
@@ -30,6 +92,7 @@ async function bootstrap() {
     optionsSuccessStatus: 204,
     credentials: true,
   });
+
   app.use(helmet());
   app.setGlobalPrefix('api/v1');
   app.useGlobalFilters(new AllExceptionsFilter());
@@ -46,12 +109,25 @@ async function bootstrap() {
       in: 'header',
     })
     .build();
+
   const documentFactory = () => SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('swagger', app, documentFactory);
 
-  await app.listen(process.env.PORT ?? 3000);
+  await app.init();
+  let server: express.Express;
+  server = app.getHttpAdapter().getInstance();
 }
-bootstrap();
-function compresion(): any {
-  throw new Error('Function not implemented.');
+
+// Inicializamos la app solo una vez (importante para serverless)
+const bootstrapPromise = bootstrap();
+
+// Handler que Vercel invoca en cada request
+export default async function (req: VercelRequest, res: VercelResponse) {
+  // Esperamos a que la app esté lista
+  await bootstrapPromise;
+  if (!server) {
+    res.status(503).send('Server is initializing');
+    return;
+  }
+  server(req, res);
 }
