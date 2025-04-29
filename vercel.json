@@ -4,8 +4,8 @@
     "installCommand": "npm install",
     "framework": null,
     "functions": {
-        "dist/api/index.js": {
-            "runtime": "vercel-node@18.0.0",
+        "api/index.js": {
+            "runtime": "vercel-node@20.0.0",
             "maxDuration": 30
         }
     },
